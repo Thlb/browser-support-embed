@@ -1,7 +1,7 @@
 (function(d) {
   "use strict";
-  var base = "//cdn.jsdelivr.net/browser-support-embed/0.1.1/";
-
+  var base = "https://thlb.github.io/browser-support-embed/iframe/";
+  
   var i, count = 0;
 
   function queryclass(name) {
@@ -32,50 +32,46 @@
     }
   }
 
-  function render(card, cardurl) {
-    cardurl = base ;
+  function render(frame) {
     
-    var ie = querydata(card, 'ie');
-    var firefox = querydata(card, 'firefox');
-	var chrome = querydata(card, 'chrome');
-	var opera = querydata(card, 'opera');
-	var safari = querydata(card, 'safari');
-	var theme = querydata(card, 'theme');
-	var colors = querydata(card, 'colors'); 
+    var ie = querydata(frame, 'ie');
+    var firefox = querydata(frame, 'firefox');
+	  var chrome = querydata(frame, 'chrome');
+	  var opera = querydata(frame, 'opera');
+	  var safari = querydata(frame, 'safari');
+	  var theme = querydata(frame, 'theme');
+	  var colors = querydata(frame, 'colors'); 
     
-	count += 1;
-    var width = querydata(card, 'width');
-    var height = querydata(card, 'height');
-    var target = querydata(card, 'target');
+	  
+    var width = querydata(frame, 'width');
+    var height = querydata(frame, 'height');
+    var target = querydata(frame, 'target');
 	
-    var identity = 'ghcard-' + count;
+    count += 1;
+    var frameid = 'bsup-' + count;
 
     var iframe = d.createElement('iframe');
-    iframe.setAttribute('id', identity);
+    iframe.setAttribute('id', frameid);
     iframe.setAttribute('frameborder', 0);
     iframe.setAttribute('scrolling', 0);
     iframe.setAttribute('allowtransparency', true);
 
-    var url = cardurl + 'index.html?theme=' + theme + '&ie=' + ie + '&colors=' + colors + '&firefox=' + firefox + '&chrome=' + chrome + '&opera=' + opera + '&safari=' + safari;
+    var url = base + 'iframe.html?theme=' + theme + '&ie=' + ie + '&colors=' + colors + '&firefox=' + firefox + '&chrome=' + chrome + '&opera=' + opera + '&safari=' + safari;
 
-   
     iframe.src = url;
-    iframe.width = width || Math.min(card.parentNode.clientWidth || 400, 400);
+    iframe.width = width || Math.min(frame.parentNode.clientWidth || 400, 400);
     if (height) {
       iframe.height = height;
     }
     heighty(iframe);
-    card.parentNode.replaceChild(iframe, card);
+    frame.parentNode.replaceChild(iframe, frame);
     return iframe;
   }
 
-  var cards = queryclass('browser-sup');
-  for (i = 0; i < cards.length; i++) {
-    render(cards[i]);
+  var frames = queryclass('browser-sup');
+  for (i = 0; i < frames.length; i++) {
+    render(frames[i]);
   }
 
-  if (window.githubCard) {
-    window.githubCard.render = render;
-  }
   d.body.className = 'ready';
 })(document);

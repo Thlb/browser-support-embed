@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Browser support demo</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<style type="text/css">
+	    *, *:after, *:before {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		
+		body{
+			background-color:#E9F0F5;	
+			font-family: 'Roboto', sans-serif;
+			font-size:100%;
+		}
+	
+		#main{
+			margin: 20px auto;
+			padding:20px 20px 60px 20px;
+			width: 60%;
+			min-width:740px;
+			min-height: 400px;
+			background-color: #FFFFFF;
+			box-shadow: 0 8px 16px rgba(0,0,0,.08),0 2px 6px rgba(0,0,0,.04);
+		}
+		
+		h1{
+			text-align:center;	
+			font-weight:300;
+			font-size:2.8rem;
+			padding-bottom:20px;
+			color:#4a8bfc;
+		}
+		
+		header:after{
+			display: block;
+			content: '';
+			margin:0 auto;
+			width:100px;
+			border-bottom:solid 1px #4a8bfc;
+		}
+		
+		h2{
+			text-align:center;	
+			font-weight:300;
+			font-size:1.8rem;
+			padding-top:20px;
+			color:#4a8bfc;
+		}
+		
+		footer p{
+			padding-top:40px;
+			text-align:center;	
+		}
+		
+		a{
+			color:#888;	
+			text-decoration:none;
+			transition:color 0.5s ease;
+		}
+		
+		a:hover{
+			color:#4a8bfc;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="main">
+    	<header>
+    		<h1>Browser support widget demo</h1>
+        </header>
+        
+        <h2>Default (light theme without colors)</h2>
+        
+        <div style="width:300px; margin:0 auto;">
+            <div style="display:inline-block; width:300px;">
+                <div class="browser-sup" data-ie="9+" data-firefox="yes" data-chrome="yes" data-safari="unk" data-opera="no" data-width="300" data-height="120"></div>
+            </div>
+        </div>
+        
+        <h2>Default (light theme with colors)</h2>
+        
+        <div style="width:300px; margin:0 auto;">
+            <div style="display:inline-block; width:300px; ">
+                <div class="browser-sup" data-ie="9+" data-firefox="yes" data-chrome="yes" data-safari="unk" data-opera="no" data-colors="yes" data-width="300" data-height="120"></div>
+            </div>
+        </div>
+        
+        <h2>Customize the container as you want : add borders / background</h2>
+        
+        <div style="width:300px; margin:0 auto;">
+        	<div style="background:#F6F7FA; border:solid 1px #AAAAAA; box-shadow: 0 8px 16px rgba(0,0,0,.08),0 2px 6px rgba(0,0,0,.04); border-radius:5px; display:inline-block; width:300px; margin:0 auto;">
+                <div class="browser-sup" data-ie="9+" data-firefox="yes" data-chrome="yes" data-safari="unk" data-opera="no" data-theme="light" data-width="300" data-height="120"></div>
+            </div>
+        </div>
+       
+        
+        <h2>Choose a theme : light / dark whith(out) colors</h2>
+        
+        <div style="width:620px; margin:0 auto;">
+        	<div style="background:#F6F7FA; border:solid 1px #AAAAAA; box-shadow: 0 8px 16px rgba(0,0,0,.08),0 2px 6px rgba(0,0,0,.04); border-radius:5px; display:inline-block; width:300px; margin:0 auto;">
+                <div class="browser-sup" data-ie="9+" data-firefox="yes" data-chrome="yes" data-safari="unk" data-opera="no" data-theme="light" data-width="300" data-height="120"></div>
+            </div>
+            &nbsp;&nbsp;&nbsp;
+            <div style="background:#666; border:solid 1px #AAAAAA; box-shadow: 0 8px 16px rgba(0,0,0,.08),0 2px 6px rgba(0,0,0,.04); border-radius:5px; display:inline-block; width:300px; margin:0 auto;">
+                <div class="browser-sup" data-ie="9+" data-firefox="yes" data-chrome="yes" data-safari="unk" data-opera="no" data-theme="dark" data-width="300" data-height="120"></div>
+            </div>
+        </div>
+        <br />
+        <div style="width:620px; margin:0 auto;">
+        	<div style="background:#F6F7FA; border:solid 1px #AAAAAA; box-shadow: 0 8px 16px rgba(0,0,0,.08),0 2px 6px rgba(0,0,0,.04); border-radius:5px; display:inline-block; width:300px; margin:0 auto;">
+                <div class="browser-sup" data-ie="9+" data-firefox="yes" data-chrome="yes" data-safari="unk" data-opera="no" data-theme="light" data-colors="yes" data-width="300" data-height="120"></div>
+            </div>
+            &nbsp;&nbsp;&nbsp;
+            <div style="background:#666; border:solid 1px #AAAAAA; box-shadow: 0 8px 16px rgba(0,0,0,.08),0 2px 6px rgba(0,0,0,.04); border-radius:5px; display:inline-block; width:300px; margin:0 auto;">
+                <div class="browser-sup" data-ie="9+" data-firefox="yes" data-chrome="yes" data-safari="unk" data-opera="no" data-theme="dark" data-colors="yes" data-width="300" data-height="120"></div>
+            </div>
+        </div>
+        <footer>
+    		<p>
+            	<a href="https://github.com/thlb/browser-support-embed"><i class="fa fa-2x fa-github" aria-hidden="true"></i><br />View on GitHub</a>
+            </p>
+		</footer>
+ 	</div>
+ 	
+    <script type="text/javascript" src="./widget.js"></script>
+</body>
+</html>

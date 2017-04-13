@@ -2,6 +2,10 @@
 
 A tool made for developers to show each browser compatibility with their projects.
 
+# Demo
+
+[Demo here!](http://lab.while-true.io/browser-support-embed/)
+
 ![Browser support Preview](https://thlb.github.io/img/browser-support-embed-showcase.png)
 
 # Usage
@@ -10,7 +14,7 @@ Insert the code below tocreate the embed iframes for you.
 
 ```html
 <div class="browser-sup" data-ie="no" data-firefox="yes" data-chrome="yes" data-safari="unk" data-opera="unk" data-width="300" data-height="120"></div>
-<script src="//cdn.jsdelivr.net/browser-support-embed/widget.js"></script>
+<script src="//cdn.jsdelivr.net/browser-support-embed/latest/widget.js"></script>
 ```
 
 This will show :
@@ -66,6 +70,6 @@ For a better customisation, you can create a parent div to set borders, backgrou
 <div style="background:#F6F7FA; border:solid 1px #AAAAAA; border-radius:5px; display:inline-block; width:300px; margin:0 auto;">
   <div class="browser-sup" data-ie="9+" data-firefox="yes" data-chrome="no" data-safari="unk" data-opera="" data-theme="light" data-width="300" data-height="120"></div>
 </div>
-<script src="//cdn.jsdelivr.net/browser-support-embed/widget.js"></script>
+<script src="//cdn.jsdelivr.net/browser-support-embed/latest/widget.js"></script>
 ```
 
