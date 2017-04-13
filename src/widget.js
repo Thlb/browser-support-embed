@@ -1,6 +1,6 @@
 (function(d) {
   "use strict";
-  var base = "//cdn.jsdelivr.net/browser-support-embed/1.0.0/";
+  var base = "//cdn.jsdelivr.net/browser-support-embed/0.1.1/";
 
   var i, count = 0;
 
