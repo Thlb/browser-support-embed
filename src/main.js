@@ -53,21 +53,13 @@ function getTooltip(value) {
 	"use strict";
 	var qs = querystring();
 	var browsers = ["ie", "firefox", "chrome", "safari", "opera"]; 
-	var div, ul, li, p, a, i;
+	var div, ul, li, p, a;
 	var bsr;
 		
 	div = document.createElement('div');
 	div.className = "browser-support";
 	p = document.createElement('p');
 	p.innerHTML = 'Browser support';
-	
-	a = document.createElement('a');
-	a.href = 'https://github.com/thlb/browser-support-embed';
-	
-	i = document.createElement('i');
-	i.className = "fa fa-question";
-	a.appendChild(i);
-	p.appendChild(a);
 	
 	ul = document.createElement('ul');
 	if(qs.theme){
