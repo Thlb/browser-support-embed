@@ -1,7 +1,7 @@
 {
   "name": "browser-support-embed",
   "repo": "thlb/browser-support-embed",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "files": {
     "basePath": "jsdelivr"
   }
