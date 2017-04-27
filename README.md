@@ -6,7 +6,7 @@ A tool made for developers to show each browser compatibility with their project
 
 [Demo here!](http://lab.while-true.io/browser-support-embed/)
 
-![Browser support Preview](https://thlb.github.io/img/browser-support-embed-showcase.png)
+![Browser support Preview](https://github.com/Thlb/thlb.github.io/blob/master/img/browser-support-embed-showcase.png)
 
 # Usage
 
@@ -19,7 +19,7 @@ Insert the code below tocreate the embed iframes for you.
 
 This will show :
 
-![Browser support Preview](https://thlb.github.io/img/browser-support-embed-01.png)
+![Browser support Preview](https://github.com/Thlb/thlb.github.io/blob/master/img/browser-support-embed-01.png)
 
 ## Browsers support parameters
 
